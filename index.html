@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI对战五子棋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>五子棋AI对战</h1>
+        <div class="game-info">
+            <div class="player-info">
+                <div class="player you">
+                    <div class="piece black"></div>
+                    <span>你</span>
+                </div>
+                <div class="score">0 : 0</div>
+                <div class="player ai">
+                    <div class="piece white"></div>
+                    <span>AI</span>
+                </div>
+            </div>
+            <div class="status">你的回合</div>
+            <div class="cheat-warning hidden">
+                <span id="warning-text"></span>
+                <div class="penalty-bar">
+                    <div class="penalty-progress" id="penalty-progress"></div>
+                </div>
+            </div>
+        </div>
+        <div class="board" id="board"></div>
+        <div class="game-over hidden" id="game-over">
+            <h2 id="result-text"></h2>
+            <button id="continue-btn">继续游戏</button>
+        </div>
+    </div>
+
+    <script src="out.js"></script>
+    <script src="game.js"></script>
+    <script src="elo.js"></script>
+</body>
+</html>
